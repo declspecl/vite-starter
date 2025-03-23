@@ -28,6 +28,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p>
+        Welcome! This program helps with code. To learn how to read, try resources like:
+        <a href="https://www.oxfordlearning.com/how-to-improve-reading-comprehension/" target="_blank">Oxford Learning</a> or
+        <a href="https://www.understood.org/en/articles/7-strategies-to-improve-reading-comprehension" target="_blank">Understood.org</a>.
+      </p>
     </>
   )
 }
