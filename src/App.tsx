@@ -29,6 +29,27 @@ function Contact() {
   );
 }
 
+function Gallery() {
+  const images = [
+    'https://via.placeholder.com/300x200',
+    'https://via.placeholder.com/300x200',
+    'https://via.placeholder.com/300x200',
+    'https://via.placeholder.com/300x200',
+    'https://via.placeholder.com/300x200',
+  ];
+
+  return (
+    <div>
+      <h1>My Journeys</h1>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        {images.map((image, index) => (
+          <img key={index} src={image} alt={`Journey ${index + 1}`} style={{ margin: '10px', width: '300px', height: '200px', objectFit: 'cover' }} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -43,6 +64,9 @@ function App() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
         </ul>
       </nav>
 
@@ -50,6 +74,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </BrowserRouter>
   );
